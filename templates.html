@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }} Details</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <p>Start Date: {{ product.start_date }}</p>
+    <p>Start Time: {{ product.start_time }}</p>
+    <p>Cost: {{ product.cost }}</p>
+
+    <h2>Lessons</h2>
+    <ul>
+        {% for lesson in lessons %}
+            <li>{{ lesson.title }} - <a href="{{ lesson.video_link }}">Watch Video</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Groups</h2>
+    <ul>
+        {% for group in groups %}
+            <li>{{ group.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
